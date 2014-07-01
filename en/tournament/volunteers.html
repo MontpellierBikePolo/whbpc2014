@@ -1,0 +1,110 @@
+<div id="tournament-volunteers" class="tournament">
+    <h2>Tournoi</h2>
+
+    <h3>Volontaires</h3>
+    <img src="../../images/volunteers.jpg">
+
+    <p> Si vous souhaitez nous aider dans l’organisation des Championnats du monde 2014, vous pouvez remplir ce
+        formulaire
+        qui nous aidera à gérer nos bénévoles. En le remplissant vous vous engagez à nous aider sur les créneaux
+        choisis. </p>
+
+    <form>
+        <ul>
+            <li><label for="lastname">Nom </label><input type="text" name="surname" id="lastname"></li>
+            <li><label for="firstname">Prénom </label><input type="text" name="firstname" id="firstname"></li>
+            <li><label for="email">Email </label> <input type="email" name="email" id="email"></li>
+            <li><label for="country">Pays</label>
+                <select name="country" id="country" class="country">
+                </select>
+            </li>
+            <li>
+                <div class="help">
+                    <label for="help-construct-courts" class="option">
+                        <input type="checkbox" name="construct-courts" id="help-construct-courts"/>Montage des
+                        terrains
+                    </label>
+
+                    <div class="toggle" data-name="construct-courts">
+                        <label for="help-construct-courts-monday" class="option">
+                            <input type="checkbox" id="help-construct-courts-monday" name="construct-courts-monday">
+                            Lundi
+                        </label>
+                        <label for="help-construct-courts-tuesday" class="option">
+                            <input type="checkbox" id="help-construct-courts-tuesday"
+                                   name="construct-courts-tuesday">
+                            Mardi
+                        </label>
+                    </div>
+                </div>
+
+                <div class="help">
+                    <label for="help-deconstruct-courts" class="option">
+                        <input type="checkbox" name="deconstruct-courts" id="help-deconstruct-courts"/>
+                        Démontage des terrains (Dimanche)
+                    </label>
+                </div>
+
+                <div class="help">
+                    <label for="help-score-table" class="option">
+                        <input type="checkbox" name="score-table" id="help-score-table"/>Table de score
+                    </label>
+
+                    <div class="toggle" data-name="score-table">
+                        <label for="help-score-table-wednesday" class="option">
+                            <input type="checkbox" id="help-score-table-wednesday" name="score-table-wednesday">
+                            Mercredi
+                        </label>
+                        <label for="help-score-table-thursday" class="option">
+                            <input type="checkbox" id="help-score-table-thursday" name="score-table-thursday">
+                            Jeudi
+                        </label>
+                        <label for="help-score-table-friday" class="option">
+                            <input type="checkbox" id="help-score-table-friday" name="score-table-friday">
+                            Vendredi
+                        </label>
+                        <label for="help-score-table-saturday" class="option">
+                            <input type="checkbox" id="help-score-table-saturday" name="score-table-saturday">
+                            Samedi
+                        </label>
+                    </div>
+                </div>
+
+                <div class="help">
+                    <label for="help-video" class="option">
+                        <input type="checkbox" name="video" id="help-video"/>Video
+                    </label>
+
+                    <div class="toggle" data-name="video">
+                        <label for="help-video-wednesday" class="option">
+                            <input type="checkbox" id="help-video-wednesday" name="video-wednesday">
+                            Mercredi
+                        </label>
+                        <label for="help-video-thursday" class="option">
+                            <input type="checkbox" id="help-video-thursday" name="video-thursday">
+                            Jeudi
+                        </label>
+                        <label for="help-video-friday" class="option">
+                            <input type="checkbox" id="help-video-friday" name="video-friday">
+                            Vendredi
+                        </label>
+                        <label for="help-video-saturday" class="option">
+                            <input type="checkbox" id="help-video-saturday" name="video-saturday">
+                            Samedi
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p><input type="submit" value="Envoyer"/></p>
+    </form>
+    <script>
+        $('.toggle').hide();
+        $('.help input[type=checkbox]').on('change', function () {
+            var $toggle = $('.toggle[data-name=' + $(this).attr('name') + ']'),
+                    checked = $(this).is(':checked');
+            $toggle.toggle();
+            if (!checked) $toggle.find('input').attr('checked', checked);
+        });
+    </script>
+</div>
