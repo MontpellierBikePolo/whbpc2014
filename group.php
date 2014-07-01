@@ -12,10 +12,10 @@ require 'common/head.html';
 <?php
 require 'en/hero.html';
 require 'en/header.html';
-require 'en/stat.html';
 require 'en/schedule.html';
 require 'en/refereeing.html';
 require 'en/volunteers.html';
+require 'en/stat.html';
 require 'en/accomodations.html';
 require 'en/streaming.html';
 require 'en/sponsors.html';
